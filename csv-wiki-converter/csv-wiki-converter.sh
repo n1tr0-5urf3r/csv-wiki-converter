@@ -2,9 +2,9 @@
 
 printUsage(){
 	echo "Usage:"
-	echo "csv-wiki-converter.sh INPUTFILE OUTPUTFILE"
-	echo "Use semicolon as field separator"
-	echo "Make sure there is no semicolon contained in your data"
+	echo "	csv-wiki-converter.sh INPUTFILE OUTPUTFILE"
+	echo "	Use semicolon as field separator"
+	echo "	Make sure there is no semicolon contained in your data"
 }
 
 # Check for parameters
