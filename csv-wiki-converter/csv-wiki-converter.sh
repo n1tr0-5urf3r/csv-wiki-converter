@@ -24,6 +24,9 @@ class=$(egrep "^class=.*$" $configfile | sed 's/class=//g')
 sortable=$(egrep "^sortable=.*$" $configfile | sed 's/sortable=//g')
 first=1
 
+# Unify encoding
+dos2unix $INPUT > /dev/null 2>&1
+
 # Read from settings
 if [ $sortable -eq 1 ]; then
 	sortable="sortable "
