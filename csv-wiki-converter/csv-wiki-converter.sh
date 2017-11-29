@@ -49,7 +49,7 @@ cat "$INPUT" | while read LINE; do
 	counter=$(echo "$LINE" | awk 'BEGIN{ FS = ";" } ; { print NF }')
 	# Go through each field
 	for i in $(seq 1 $counter); do
-		field=$(echo "$LINE" | awk 'BEGIN { FS = ";" } ; { print $"'"$index"'" }')
+		field=$(echo "$LINE" | awk -v asdf=$index 'BEGIN { FS = ";" } ; { print $asdf }')
 		echo "$prefix $field" >> $OUTPUT
 		index=$(($index+1))
 	done
